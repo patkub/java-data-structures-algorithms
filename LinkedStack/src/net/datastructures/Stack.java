@@ -61,5 +61,5 @@ public interface Stack<E> {
    * Removes and returns the top element from the stack.
    * @return element removed (or null if empty)
    */
-  E pop ();
+  E pop () throws StackIsEmptyException;
 }

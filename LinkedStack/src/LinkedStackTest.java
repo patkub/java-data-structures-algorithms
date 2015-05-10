@@ -3,6 +3,7 @@
 
 import java.util.Scanner;
 import net.datastructures.LinkedStack;
+import net.datastructures.StackIsEmptyException;
 
 public class LinkedStackTest {
     private static Scanner input = new Scanner(System.in);
@@ -39,11 +40,13 @@ public class LinkedStackTest {
 
                     case 'R': {
                         //remove
-                        if (stack.isEmpty()) {
-                            System.out.println("Stack is empty.");
-                        } else {
+                        try {
                             num = stack.pop();
-                            System.out.println("Removed: " + num);
+                            System.out.println("Removed top element in stack: " + num);
+                            System.out.println("Stack from top to bottom: " + stack);
+                        }
+                        catch (StackIsEmptyException e) {
+                            System.out.println(e.getMessage());
                         }
                         break;
                     }

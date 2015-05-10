@@ -72,9 +72,9 @@ public class LinkedStack<E> implements Stack<E> {
    * @return element removed (or null if empty)
    */
   @Override
-  public E pop() {
+  public E pop() throws StackIsEmptyException {
       if (list.size() == 0) {
-          return null;
+         throw new StackIsEmptyException("Stack is empty.");
       }
       return list.removeFirst();
   }
