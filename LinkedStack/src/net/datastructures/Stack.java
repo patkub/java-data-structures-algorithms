@@ -33,33 +33,46 @@ package net.datastructures;
  */
 public interface Stack<E> {
 
-  /**
-   * Returns the number of elements in the stack.
-   * @return number of elements in the stack
-   */
-  int size();
+    /**
+     * Returns the number of elements in the stack.
+     *
+     * @return number of elements in the stack
+     */
+    int size();
 
-  /**
-   * Tests whether the stack is empty.
-   * @return true if the stack is empty, false otherwise
-   */
-  boolean isEmpty();
+    /**
+     * Tests whether the stack is empty.
+     *
+     * @return true if the stack is empty, false otherwise
+     */
+    boolean isEmpty();
 
-  /**
-   * Inserts an element at the top of the stack.
-   * @param e   the element to be inserted
-   */
-  void push(E e);
+    /**
+     * Inserts an element at the top of the stack.
+     *
+     * @param e the element to be inserted
+     */
+    void push(E e);
 
-  /**
-   * Returns, but does not remove, the element at the top of the stack.
-   * @return top element in the stack (or null if empty)
-   */
-  E top();
+    /**
+     * Returns, but does not remove, the element at the top of the stack.
+     *
+     * @return top element in the stack (or null if empty)
+     */
+    E top();
 
-  /**
-   * Removes and returns the top element from the stack.
-   * @return element removed (or null if empty)
-   */
-  E pop () throws StackIsEmptyException;
+    /**
+     * Removes and returns the top element from the stack.
+     *
+     * @return element removed (or null if empty)
+     */
+    E pop() throws StackIsEmptyException;
+
+    /**
+     * Returns the 1-based position where an object is on this stack.
+     * The topmost item on the stack is considered to be at distance 1.
+     *
+     * @return element removed (or null if empty)
+     */
+    int search(E e);
 }
