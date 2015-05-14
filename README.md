@@ -19,5 +19,9 @@ Data structures and algorithms implemented in java.
 <td>Linked Stack</td>
 <td>Stack LIFO data structure implemented using a Singly Linked List.</td>
 </tr>
+<tr>
+<td>Summation Puzzle Solver</td>
+<td>Solve summation puzzles recursively.</td>
+</tr>
 </tbody>
 </table>
