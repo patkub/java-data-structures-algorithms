@@ -1,21 +1,17 @@
-/**
- * Created by Patka on 4/3/2015.
- *
- * Manages stocks using a Concurrent Linked Deque
- */
+//Stock Transactions - Patrick Kubiak - 4/3/2015
+//Manages stock transactions using a Circular Queue.
 
+import net.datastructures.LinkedCircularQueue;
 import java.text.NumberFormat;
 import java.text.DecimalFormat;
-import java.util.concurrent.ConcurrentLinkedDeque;
-import java.util.Iterator;
 
 public class StockTrans {
 
-    private ConcurrentLinkedDeque<Share> sharesDeque;
+    private LinkedCircularQueue<Share> sharesCircleQueue;
     private int totalShares, capitalGain;
 
     public StockTrans() {
-        sharesDeque = new ConcurrentLinkedDeque<Share>();
+        sharesCircleQueue = new LinkedCircularQueue<Share>();
         capitalGain = 0;
     }
 
@@ -25,7 +21,7 @@ public class StockTrans {
      * @param price         Integer price of shares.
      */
     public void buyShares(int amount, int price) {
-        sharesDeque.add(new Share(amount, price));
+        sharesCircleQueue.enqueue(new Share(amount, price));
         totalShares += amount;
     }
 
@@ -43,7 +39,7 @@ public class StockTrans {
         int origPrice, firstShares;
 
         while (amount > 0) {
-            firstShare = sharesDeque.peekFirst();
+            firstShare = sharesCircleQueue.first();
             firstShares = firstShare.getShares();
             origPrice = firstShare.getPrice();
 
@@ -55,7 +51,7 @@ public class StockTrans {
             else {
                 capitalGain += (sellPrice - origPrice) * firstShares;
                 amount -= firstShares;
-                sharesDeque.removeFirst();
+                sharesCircleQueue.dequeue();
             }
         }
     }
@@ -81,12 +77,9 @@ public class StockTrans {
     }
 
     /**
-     * Print out the deque.
+     * Displays the shares.
      */
-    public void printDeque() {
-        Iterator iterator = sharesDeque.iterator();
-        while(iterator.hasNext()) {
-            System.out.println(iterator.next().toString());
-        }
+    public void displayShares() {
+        System.out.print(sharesCircleQueue.toString());
     }
 }

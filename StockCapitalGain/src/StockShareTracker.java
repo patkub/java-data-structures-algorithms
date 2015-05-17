@@ -1,6 +1,5 @@
-/**
- * Created by Patka on 4/3/2015.
- */
+//Stock Share Tracker - Patrick Kubiak - 4/3/2015
+//Manage stock transactions.
 
 import java.util.Scanner;
 
@@ -9,7 +8,6 @@ public class StockShareTracker {
     public static void main(String[] args) {
         //initialize
         StockTrans stockManager = new StockTrans();     //manage stock transactions
-
         Scanner input = new Scanner(System.in);         //get user input
         String strInput;                                //store user input
         String[] strCommand;                            //determine action
@@ -54,7 +52,7 @@ public class StockShareTracker {
             else if (strInput.toUpperCase().charAt(0) == 'S') {
                 //display shares
                 System.out.println("===================== SHARES =====================");
-                stockManager.printDeque();
+                stockManager.displayShares();
                 System.out.println("\nCapital Gain: " + stockManager.getFormattedCapitalGain());
                 System.out.println("==================================================");
             }

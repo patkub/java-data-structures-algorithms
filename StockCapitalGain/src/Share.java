@@ -1,8 +1,5 @@
-/**
- * Created by Patka on 4/1/2015.
- *
- * Represents a share of stock.
- */
+//Share - Patrick Kubiak - 4/1/2015
+//Represents a share of stock.
 
 import java.text.NumberFormat;
 import java.text.DecimalFormat;
