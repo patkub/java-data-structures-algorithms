@@ -16,6 +16,10 @@ Data structures and algorithms implemented in java.
 <td>Binary Search Tree implemented using a Singly Linked List.</td>
 </tr>
 <tr>
+<td>Linked Queue</td>
+<td>Queue FIFO data structure implemented using a Singly Linked List.</td>
+</tr>
+<tr>
 <td>Linked Stack</td>
 <td>Stack LIFO data structure implemented using a Singly Linked List.</td>
 </tr>
