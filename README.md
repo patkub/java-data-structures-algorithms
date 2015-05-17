@@ -25,7 +25,7 @@ Data structures and algorithms implemented in java.
 </tr>
 <tr>
 <td>Stock Capital Gain</td>
-<td>Manages stock transactions using a Concurrent Linked Deque.</td>
+<td>Manages stock transactions using a Linked Circular Queue.</td>
 </tr>
 <tr>
 <td>Summation Puzzle Solver</td>
