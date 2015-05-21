@@ -12,6 +12,10 @@ Data structures and algorithms implemented in java.
 </thead>
 <tbody>
 <tr>
+<td>Game Application</td>
+<td>An application of a scoreboard using a Singly and Doubly Linked List.</td>
+</tr>
+<tr>
 <td>Linked BST</td>
 <td>Binary Search Tree implemented using a Singly Linked List.</td>
 </tr>
