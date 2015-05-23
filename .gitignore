@@ -45,7 +45,7 @@ Temporary Items
 # IntelliJ
 .idea/
 out/
-.iml
+*.iml
 
 # Java
 *.class
