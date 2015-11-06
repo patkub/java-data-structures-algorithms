@@ -12,6 +12,10 @@ Data structures and algorithms implemented in java.
 </thead>
 <tbody>
 <tr>
+<td>Euclidean Algorithm</td>
+<td>Recursivly compute the greatest common divisor.</td>
+</tr>
+<tr>
 <td>Game Application</td>
 <td>An application of a scoreboard using a Singly and Doubly Linked List.</td>
 </tr>
